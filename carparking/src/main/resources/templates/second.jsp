@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ground Floor</title>
+  <title>Second Floor</title>
   <style>
     body {
       display: flex;
@@ -95,7 +95,7 @@
   }
 
   // Refresh the page every 1000 milliseconds (1 second)
-  setInterval(refreshPage, 1000);
+  setInterval(refreshPage, 2000);
   </script>
 </head>
 <body>
