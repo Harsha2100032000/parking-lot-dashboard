@@ -88,31 +88,14 @@
 }
     
   </style>
-  <script>
+   <script>
   // Function to refresh the page every 1 second
-  
-  function updateParkingStatus() {
-	    // AJAX request to fetch parking status
-	    fetch('/parkingStatus')
-	    .then(response => response.json())
-	    .then(data => {
-	        // Update the UI based on the received data
-	        data.forEach(space => {
-	            const element = document.getElementById(space.id);
-	            if (element) {
-	                element.classList.toggle('yes', space.status === 'yes');
-	                element.classList.toggle('no', space.status === 'no');
-	            }
-	        });
-	    })
-	    .catch(error => console.error('Error fetching parking status:', error));
-	}
+  function refreshPage() {
+    location.reload();
+  }
 
-	// Call the function initially
-	updateParkingStatus();
-
-	// Schedule the function to run every 5 seconds (adjust the interval as needed)
-	setInterval(updateParkingStatus, 5000);
+  // Refresh the page every 1000 milliseconds (1 second)
+  setInterval(refreshPage, 2000);
   </script>
 </head>
 <body>
